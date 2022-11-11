@@ -23,12 +23,10 @@ class Solution:
             ans ^= nums[i]
         return ans
 
-    def merge(self, nums1, m: int, nums2, n: int):
-        nums1 = nums1[0:m]
-        nums2 = nums2[0:n]
-        nums1 = nums1 + nums2
-        nums1.sort()
-        print(nums1)
+    def isPalindrome(self, x):
+        if str(x) == str(x)[::-1]:
+            return True
+        else:
+            return False
 
 solution = Solution()
-solution.merge([1], 1, [], 0)

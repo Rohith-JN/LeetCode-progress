@@ -29,4 +29,16 @@ class Solution:
         else:
             return False
 
+    def isValid(self, s: str):
+        parantheses = {")": "(", "}": "{", "]" : "["}
+        stack = []
+        for i in s:
+            if i in parantheses.values():
+                stack.append(i)
+            elif stack and parantheses[i] == stack[-1]:
+                stack.pop()
+            else:
+                return False
+        return stack == []
+
 solution = Solution()
